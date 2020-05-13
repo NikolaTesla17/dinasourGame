@@ -2,31 +2,29 @@
 // 	8/21/19
 //  Project 8/22
 
-var balls = [];
-var x = prompt("Number of Balls","42"); //user entered number of balls page dialog
+let dino, dinoImg;
+function preload() {
+  dinoImg = loadImage('images/dino.png');
+}
 function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
-  background(5, 5, 5);
-  fill(200, 30, 150);
-
-  var dino = new Image();
-  dino.src = '\images\dino.png'
-
-  for(q=0;q<x;q++){ //create array with number of balls wanted
-    balls[q] = new Ball(random(width),random(height),random(-5,5),random(-5,5))
-  }
+  // background(225, 5, 5);
+  // fill(200, 30, 150);
+  background(50);
+  dino = new dinoPlayer(20,600)
 }
-
 
 function draw() {
-  //for(i=1;i<3;i++){} put other function inside this to run at 60fps
-ballsDraw();
+  //image(dinoImg, 20, 200, dino.width / 6, dino.height / 6);
+
+  dino.run();
 }
 
-function ballsDraw(){
-  background(5,5,5,50)//get rid of ball trails
-  for(i=0;i<x;i++){
-balls[i].run();
-}
-}
+function keyPressed(){
+  if (keyCode === UP_ARROW) {
+    dino.vel.y = dino.vel.y-8;
+  }
+} 
+
+
