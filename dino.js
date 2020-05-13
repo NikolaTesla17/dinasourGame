@@ -3,7 +3,6 @@ class Ball{
       this.loc = createVector(x, y);
       this.vel = createVector(dx, dy);
       this.acc = createVector (0, 0.2);
-      this.clr = color(random(255),random(255),random(255));
     }
     run(){//use this so you dont have to run all of these for each ball
       this.checkEdges();

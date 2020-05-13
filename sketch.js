@@ -9,6 +9,10 @@ function setup() {
   cnv.position((windowWidth-width)/2, 30);
   background(5, 5, 5);
   fill(200, 30, 150);
+
+  var dino = new Image();
+  dino.src = '\images\dino.png'
+
   for(q=0;q<x;q++){ //create array with number of balls wanted
     balls[q] = new Ball(random(width),random(height),random(-5,5),random(-5,5))
   }
