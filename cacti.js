@@ -6,7 +6,7 @@ class cacti{
       this.vel = createVector(0, 0);
       this.level = 0;
     }
-    run(){//use this so you dont have to run all of these for each ball
+    run(){
       this.update();
       this.render();
     }
