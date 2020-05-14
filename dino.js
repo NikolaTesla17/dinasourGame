@@ -15,8 +15,11 @@ class dinoPlayer{
     update(){//update location
 
       this.loc.add(this.vel);
-
       this.vel.add(0, 0.35);
+
+      if ((keyIsDown(RIGHT_ARROW)) && (this.jump == false) && (this.vel.y>0)){
+        this.vel.add(0, -0.3);
+      }
 
       if(this.loc.y > height-100){
         this.vel.y = 0;
@@ -33,7 +36,7 @@ class dinoPlayer{
     die(){ //code from mozilla       rect 1 dino     rect 2 cacti
       if (this.loc.x < cactus.loc.x + (dinoImg.width/6) &&
         this.loc.x + dinoImg.width/6 > cactus.loc.x &&
-        this.loc.y < cactus.loc.y + (cactiImg.height/6) &&
+        this.loc.y < cactus.loc.y + (cactiImg.height/5) &&
         this.loc.y + (dinoImg.height/6) > cactus.loc.y) {
           death.play();
       this.gameOver = true;

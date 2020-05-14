@@ -11,15 +11,15 @@ function setup() {
   // fill(200, 30, 150);
   background(50);
   dino = new dinoPlayer(20,600)
-  cactus = new cacti(800,680)
+  cactus = new cacti(800,660)
 }
 
 function draw() {
-  //image(dinoImg, 20, 200, dino.width / 6, dino.height / 6);
-
   if(!dino.gameOver){
   dino.run();
   cactus.run();
+  textSize(16);
+  text('Up Arrow To Jump \n Right Arrow to Glide \n Dont touch the cacti', 10, 20);
   } else if(dino.gameOver){
     background(255,0,0);
     textSize(64);
@@ -41,7 +41,7 @@ function draw() {
 
 function keyPressed(){
   if (keyCode === UP_ARROW && dino.jump) {
-    dino.vel.y = dino.vel.y-10;
+    dino.vel.y = dino.vel.y-9.5;
     dino.jump = false;
   }
 }

@@ -31,6 +31,6 @@ class cacti{
     }
 
     render(){//render one frame
-      image(cactiImg, this.loc.x, this.loc.y, cactiImg.width / 6, cactiImg.height / 6);
+      image(cactiImg, this.loc.x, this.loc.y, cactiImg.width / 5, cactiImg.height / 5);
     }
   }
