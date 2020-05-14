@@ -35,6 +35,7 @@ class dinoPlayer{
         this.loc.x + dinoImg.width/6 > cactus.loc.x &&
         this.loc.y < cactus.loc.y + (cactiImg.height/6) &&
         this.loc.y + (dinoImg.height/6) > cactus.loc.y) {
+          death.play();
       this.gameOver = true;
      }
     }

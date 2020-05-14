@@ -1,11 +1,8 @@
-//  Nayan Smuek
-// 	8/21/19
-//  Project 8/22
-
-let dino, dinoImg;
+let dino, dinoImg, song;
 function preload() {
   dinoImg = loadImage('images/dino.png');
   cactiImg = loadImage('images/cacti.png');
+  death = loadSound('sounds/death.mp3');
 }
 function setup() {
   var cnv = createCanvas(800, 800);
