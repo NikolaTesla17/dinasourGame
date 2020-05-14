@@ -21,12 +21,12 @@ class cacti{
       this.vel.add(this.acc);
       }
       if(this.loc.x < -100){
-        this.loc.x = random(800,1000);
-        if(this.level <=9){
-        this.vel.x = random(-(5+this.level*0.5), -(7+(this.level*0.5)));
-        }
-        this.acc.x = 0;
-        this.level++;
+      this.loc.x = random(800,1000);
+      if(this.level <=9){
+      this.vel.x = random(-(5+this.level*0.5), -(7+(this.level*0.5)));
+      }
+      this.acc.x = 0;
+      this.level++;
       }
     }
 

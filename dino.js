@@ -2,7 +2,7 @@ class dinoPlayer{
     constructor(x,y){
       dinoImg = loadImage('images/dino.png');
       this.loc = createVector(x, y);
-      this.acc = createVector (0, 0.2);
+      this.acc = createVector (0, 0.35);
       this.vel = createVector(0, 0);
 
       this.jump = true;
@@ -15,10 +15,12 @@ class dinoPlayer{
     update(){//update location
 
       this.loc.add(this.vel);
-      this.vel.add(0, 0.35);
+      this.vel.add(this.acc);
 
-      if ((keyIsDown(RIGHT_ARROW)) && (this.jump == false) && (this.vel.y>0)){
-        this.vel.add(0, -0.3);
+      if ((keyIsDown(RIGHT_ARROW)) && 
+      (this.jump == false) && 
+      (this.vel.y>0)){
+        this.vel.add(0, (this.acc.y - 0.65));
       }
 
       if(this.loc.y > height-100){
