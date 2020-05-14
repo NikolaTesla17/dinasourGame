@@ -35,8 +35,8 @@ function draw() {
 
     if(mouseIsPressed&&mouseX>280&&mouseX<480&&mouseY>440&&mouseY<490){//check if button is pressed
     cactus.loc.x = 900;
-    cacti.level = 1;
-    cactus.vel.x = -4;
+    cactus.level = 0;
+    cactus.vel.x = -6;
     dino.gameOver = false;
     }
   }

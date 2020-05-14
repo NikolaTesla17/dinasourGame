@@ -4,13 +4,17 @@ class cacti{
       this.loc = createVector(x, y);
       this.acc = createVector (-0.05, 0);
       this.vel = createVector(0, 0);
-      this.level = 1;
+      this.level = 0;
     }
     run(){//use this so you dont have to run all of these for each ball
       this.update();
       this.render();
     }
-    update(){//update location
+    update(){
+
+      textSize(64);
+      fill(255);
+      text(this.level, 380, 80);
 
       this.loc.add(this.vel);
       if(this.vel.x < 4){
